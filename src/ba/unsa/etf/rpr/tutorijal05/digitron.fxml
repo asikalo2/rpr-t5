@@ -68,7 +68,7 @@
 
         <Button id="btn0" onAction="#add0Action" alignment="CENTER" mnemonicParsing="false" text="0" GridPane.columnIndex="0" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.columnSpan="2" GridPane.rowIndex="5"/>
-        <Button alignment="CENTER" mnemonicParsing="false" text="." GridPane.columnIndex="2" maxWidth="Infinity"
+        <Button id="dotBtn" onAction="#addDotAction" alignment="CENTER" mnemonicParsing="false" text="." GridPane.columnIndex="2" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="5"/>
 
     </children>

@@ -6,6 +6,10 @@ import javafx.scene.control.Label;
 public class Controller {
     public Label display;
 
+    private double operand1 = 0;
+    private double operand2 = 0;
+    private boolean dotAdded = false;
+
     public void add1Action(ActionEvent actionEvent) {
         if (display.getText().equals("0"))
             display.setText("");
@@ -68,5 +72,13 @@ public class Controller {
         if (display.getText().equals("0"))
             display.setText("");
         display.setText(display.getText().concat("0"));
+    }
+
+    public void addDotAction(ActionEvent actionEvent) {
+        if (!dotAdded) {
+            display.setText(display.getText().concat("."));
+            dotAdded = true;
+        }
+
     }
 }
