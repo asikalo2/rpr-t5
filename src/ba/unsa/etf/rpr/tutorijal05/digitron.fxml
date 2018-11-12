@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 <?import javafx.geometry.Insets?>
-<GridPane alignment="CENTER" vgap="10" hgap="10" fx:controller="ba.unsa.etf.rpr.tutorijal05.Controller"
+<GridPane alignment="CENTER" vgap="5" hgap="5" fx:controller="ba.unsa.etf.rpr.tutorijal05.Controller"
           xmlns="http://javafx.com/javafx/8.0.172-ea"
           xmlns:fx="http://javafx.com/fxml/1">
     <padding>
@@ -27,9 +27,9 @@
         <RowConstraints percentHeight="16" vgrow="ALWAYS"/>
     </rowConstraints>
     <children>
-        <TextField fx:id="numberField" style="-fx-background-color: lightgreen;" GridPane.columnSpan="4"
+        <Label fx:id="display" style="-fx-background-color: lightgreen;" GridPane.columnSpan="4"
                    alignment="BASELINE_RIGHT" maxHeight="Infinity" maxWidth="Infinity"
-                   editable="false"/>
+                   text="0"/>
         <Button alignment="CENTER" mnemonicParsing="false" text="\%" GridPane.columnIndex="0" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="1"/>
         <Button alignment="CENTER" mnemonicParsing="false" text="/" GridPane.columnIndex="1" maxWidth="Infinity"
@@ -39,34 +39,34 @@
         <Button alignment="CENTER" mnemonicParsing="false" text="-" GridPane.columnIndex="3" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="1"/>
 
-        <Button alignment="CENTER" mnemonicParsing="false" text="7" GridPane.columnIndex="0" maxWidth="Infinity"
+        <Button id="btn7" onAction="#add7Action" alignment="CENTER" mnemonicParsing="false" text="7" GridPane.columnIndex="0" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="2"/>
-        <Button alignment="CENTER" mnemonicParsing="false" text="8" GridPane.columnIndex="1" maxWidth="Infinity"
+        <Button id="btn8" onAction="#add8Action" alignment="CENTER" mnemonicParsing="false" text="8" GridPane.columnIndex="1" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="2"/>
-        <Button alignment="CENTER" mnemonicParsing="false" text="9" GridPane.columnIndex="2" maxWidth="Infinity"
+        <Button id="btn9" onAction="#add9Action" alignment="CENTER" mnemonicParsing="false" text="9" GridPane.columnIndex="2" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="2"/>
         <Button alignment="CENTER" mnemonicParsing="false" text="+" GridPane.columnIndex="3" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="2" GridPane.rowSpan="2"/>
 
-        <Button alignment="CENTER" mnemonicParsing="false" text="4" GridPane.columnIndex="0" maxWidth="Infinity"
+        <Button id="btn4" onAction="#add4Action" alignment="CENTER" mnemonicParsing="false" text="4" GridPane.columnIndex="0" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="3"/>
-        <Button alignment="CENTER" mnemonicParsing="false" text="5" GridPane.columnIndex="1" maxWidth="Infinity"
+        <Button id="btn5" onAction="#add5Action" alignment="CENTER" mnemonicParsing="false" text="5" GridPane.columnIndex="1" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="3"/>
-        <Button alignment="CENTER" mnemonicParsing="false" text="6" GridPane.columnIndex="2" maxWidth="Infinity"
+        <Button id="btn6" onAction="#add6Action" alignment="CENTER" mnemonicParsing="false" text="6" GridPane.columnIndex="2" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="3"/>
 
-        <Button id="button1" onAction="#add1Action" alignment="CENTER" mnemonicParsing="false" text="1"
+        <Button id="btn1" onAction="#add1Action" alignment="CENTER" mnemonicParsing="false" text="1"
                 GridPane.columnIndex="0" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="4"/>
-        <Button id="button2" onAction="#add2Action" alignment="CENTER" mnemonicParsing="false" text="2" GridPane.columnIndex="1" maxWidth="Infinity"
+        <Button id="btn2" onAction="#add2Action" alignment="CENTER" mnemonicParsing="false" text="2" GridPane.columnIndex="1" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="4"/>
-        <Button id="button3" onAction="#add3Action" alignment="CENTER" mnemonicParsing="false" text="3" GridPane.columnIndex="2" maxWidth="Infinity"
+        <Button id="btn3" onAction="#add3Action" alignment="CENTER" mnemonicParsing="false" text="3" GridPane.columnIndex="2" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="4"/>
-        <Button id="buttonCalculate" onAction="#calculateAction" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: red;" text="="
+        <Button id="equalsBtn" onAction="#calculateAction" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: red;" text="="
                 GridPane.columnIndex="3" maxWidth="Infinity" maxHeight="Infinity" GridPane.rowIndex="4"
                 GridPane.rowSpan="2"/>
 
-        <Button alignment="CENTER" mnemonicParsing="false" text="0" GridPane.columnIndex="0" maxWidth="Infinity"
+        <Button id="btn0" onAction="#add0Action" alignment="CENTER" mnemonicParsing="false" text="0" GridPane.columnIndex="0" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.columnSpan="2" GridPane.rowIndex="5"/>
         <Button alignment="CENTER" mnemonicParsing="false" text="." GridPane.columnIndex="2" maxWidth="Infinity"
                 maxHeight="Infinity" GridPane.rowIndex="5"/>
